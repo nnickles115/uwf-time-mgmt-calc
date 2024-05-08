@@ -1,19 +1,55 @@
-.input-wrapper label {
+/* 
+ * Description: Style sheet for Time Management Calculator.
+ * Author: Noah Nickles
+ * Date: 2024-05-08
+ */
+
+/* ========================================
+   Structure and Layout
+   ======================================== */
+
+/* Primary layout for label elements inside .input-wrapper:
+   - Uses Flexbox to visually reverse the order of the label and input.
+   - Aligns the input to the left and label to the right.
+   - Vertically aligns the label and input in the center.
+   - Adds a gap between the label and input for clear spacing. */
+   .input-wrapper label {
     display: flex;
-    flex-direction: row-reverse; /* Reverses the order of the label and input */
-    justify-content: flex-end; /* Aligns the input to the left and label to the right */
-    align-items: center; /* Vertically aligns the label and input */
-    gap: 6px; /* Adjusts the space between the label and input */
+    flex-direction: row-reverse; /* Reverse the visual order of children */
+    justify-content: flex-end; /* Align children to the left */
+    align-items: center; /* Center children vertically */
+    gap: 6px; /* Space between label and input */
 }
 
+/* Styles for input elements inside .input-wrapper:
+   - Sets a fixed width and height for consistency.
+   - Adds margins above and below each input for spacing.
+   - Centers text horizontally within the input. */
 .input-wrapper input {
     width: 50px;
     height: 25px;
-    margin: 6px 0;
+    margin: 6px 0; /* Margin for spacing above and below */
     text-align: center;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding and border in the element's size */
 }
 
+/* Flex display setting for inputs within .slider-wrapper:
+   - Ensures alignment with Flexbox behavior for consistent layout. */
 .slider-wrapper input {
     display: flex;
 }
+
+/* ========================================
+   Global Styles
+   ======================================== */
+/* Resets and base styles applied to all elements. */
+
+/* ========================================
+   Header Styles
+   ======================================== */
+/* Specific styles related to the global page header element. */
+
+/* ========================================
+   Form Styles
+   ======================================== */
+/* Styles specifically targeted at form layout and individual form elements. */

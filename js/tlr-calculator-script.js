@@ -1,5 +1,13 @@
 /**
- * 
+ * @file Time Management Calculator Implementation - Helps calculating and managing time based on user inputs.
+ * @author Noah Nickles
+ * @date 2024-05-08
+ */
+
+/**
+ * Sets default attributes for all input elements within the '.input-wrapper' element.
+ * This function queries for the '.input-wrapper' and iteratively applies a set of predefined
+ * attributes to each input found unless the attribute is already present.
  */
 function setDefaultLabelAttributes() {
     const wrapper = document.querySelector('.input-wrapper');
@@ -30,6 +38,10 @@ function setDefaultLabelAttributes() {
     });
 }
 
+/**
+ * Fills the input with the minimum allowed value if it is empty.
+ * @param {HTMLInputElement} input - The input element to validate and modify if necessary.
+ */
 function fillEmptyInput(input) {
     if(input.value === '') {
         input.value = parseInt(input.min, 10);
@@ -37,12 +49,21 @@ function fillEmptyInput(input) {
     updateHours();
 }
 
+/**
+ * Clears the input value if it is exactly '0', allowing for placeholder text to show.
+ * @param {HTMLInputElement} input - The input element to be cleared if it contains '0'.
+ */
 function clearZero(input) {
     if (input.value === '0') {
         input.value = '';
     }
 }
 
+/**
+ * Validates an input element's value against its defined minimum and maximum attributes,
+ * adjusting the value to remain within these bounds.
+ * @param {HTMLInputElement} input - The input element to validate.
+ */
 function validateInput(input) {
     const min = parseInt(input.min, 10);
     const max = parseInt(input.max, 10);
@@ -58,6 +79,11 @@ function validateInput(input) {
     updateHours();
 }
 
+/**
+ * Updates the displayed total of used hours and recalculates the remaining hours.
+ * This function iterates through all elements with class 'hour-input' to sum the values
+ * and update the UI accordingly.
+ */
 function updateHours() {
     const totalHours = 168;
     let usedHours = 0;
@@ -75,12 +101,20 @@ function updateHours() {
     calculatePercentages();
 }
 
+/**
+ * Calculates suggested study hours based on the 'credit-hours' input value and updates
+ * the 'study-hours' input. Assumes study hours should be three times the credit hours.
+ */
 function updateStudyHours() {
     const creditHours = document.getElementById('credit-hours').value;
     const suggestedHours = creditHours * 3;
     document.getElementById('study-hours').value = suggestedHours;
 }
 
+/**
+ * Attaches event listeners to various input elements to synchronize changes across
+ * related inputs and controls, ensuring UI consistency.
+ */
 function attachEventListeners() {
     const slider = document.getElementById('slider');
     const creditHoursInput = document.getElementById('credit-hours');
@@ -104,7 +138,6 @@ function attachEventListeners() {
         });
     }
 
-    // Listener for the reset button
     const resetButton = document.getElementById('reset-button');
     if(resetButton) {
         resetButton.addEventListener('click', function() {
@@ -113,6 +146,10 @@ function attachEventListeners() {
     }
 }
 
+/**
+ * Calculates and displays the percentage use of total hours for each input element with class 'hour-input'.
+ * It uses a predefined total of hours and updates each corresponding display element with the calculated percentage.
+ */
 function calculatePercentages() {
     const totalHours = 168;
     const inputs = document.querySelectorAll('.hour-input');
@@ -129,7 +166,8 @@ function calculatePercentages() {
 }
 
 /**
- * 
+ * Resets all input elements with class 'hour-input' and the slider to their default values.
+ * Also resets the visual display of the slider credits and recalculates hours and percentages.
  */
 function resetToDefault() {
     // Reset each input field
@@ -161,7 +199,8 @@ function resetToDefault() {
 }
 
 /**
- * 
+ * Initializes the application by setting default attributes, updating hours and study hours,
+ * and attaching necessary event listeners after the window loads.
  */
 window.onload = function() {
     setDefaultLabelAttributes();
