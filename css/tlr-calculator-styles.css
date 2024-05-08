@@ -1,0 +1,19 @@
+.input-wrapper label {
+    display: flex;
+    flex-direction: row-reverse; /* Reverses the order of the label and input */
+    justify-content: flex-end; /* Aligns the input to the left and label to the right */
+    align-items: center; /* Vertically aligns the label and input */
+    gap: 6px; /* Adjusts the space between the label and input */
+}
+
+.input-wrapper input {
+    width: 50px;
+    height: 25px;
+    margin: 6px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.slider-wrapper input {
+    display: flex;
+}

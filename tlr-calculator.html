@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLR Calculator</title>
+    <link rel="stylesheet" href="css/tlr-calculator-styles.css">
+</head>
+<body>
+    <p>Default Assumptions:
+        <ul>
+            <li>At least 1 credit hour</li>
+            <li>(Number of credit hours * 3) spent studying</li>
+            <li>At least 8 hours of sleep per night</li>
+        </ul>
+    </p>
+    <p>Number of hours in a week: 168</p>
+    <p>Number of hours remaining: <span id="hours-left">168</span></p>
+
+    <div class = slider-wrapper>
+    <label>
+        Number of Credits: <span id="slider-credits">1</span>
+        <input
+            id="slider" 
+            name="slider"
+            type="range"
+            min="0" 
+            max="21" 
+            value="1" 
+            step="1">
+    </label>
+    </div>
+
+    <!-- Had to put span on lhs due to css formatting -->
+    <div class="input-wrapper">
+        <label>
+            <span id="credit-hours-percentage"></span> Attending Class 
+            <input
+            name="credit-hours"
+            max="21"
+            value="1"/>
+        </label>
+        
+        <label>
+            <span id="study-hours-percentage"></span> Studying
+            <input
+                name="study-hours"
+                max="100"
+                value="3">
+        </label>
+
+        <label>
+            <span id="work-hours-percentage"></span> Working
+            <input
+                name="work-hours"
+                max="100"
+                value="0">
+        </label>
+
+        <label>
+            <span id="commute-hours-percentage"></span> Commuting
+            <input
+                name="commute-hours"
+                max="4"
+                value="0">
+        </label>
+
+        <label>
+            <span id="eating-hours-percentage"></span> Eating
+            <input
+                name="eating-hours"
+                max="10"
+                value="0">
+        </label>
+
+        <label>
+            <span id="sleeping-hours-percentage"></span> Sleeping
+            <input
+                name="sleeping-hours"
+                max="100"
+                value="56">
+        </label>
+
+        <label>
+            <span id="hygiene-hours-percentage"></span> Personal Hygiene
+            <input
+                name="hygiene-hours"
+                max="10"
+                value="0">
+        </label>
+
+        <label>
+            <span id="org-hours-percentage"></span> Student Organizations
+            <input
+                name="org-hours"
+                max="10"
+                value="0">
+        </label>
+
+        <label>
+            <span id="rec-hours-percentage"></span> Recreation/Self-care
+            <input
+                name="rec-hours"
+                max="10"
+                value="0">
+        </label>
+
+        <label>
+            <span id="chore-hours-percentage"></span> Household Duties
+            <input
+                name="chore-hours"
+                max="10"
+                value="0">
+        </label>
+
+        <label>
+            <span id="social-hours-percentage"></span> Socializing
+            <input
+                name="social-hours"
+                max="10"
+                value="0">
+        </label>
+
+        <label>
+            <span id="screen-hours-percentage"></span> Screen Time
+        <input
+            name="screen-hours"
+            class="hour-input" 
+            max="10"
+            value="0">
+        </label>
+
+        <label>
+            <span id="other-hours-percentage"></span> Other
+            <input
+                name="other-hours"
+                class="hour-input" 
+                max="100"
+                value="0">
+        </label>
+    </div>
+
+    <button id="reset-button">Reset to Default</button>
+
+    <noscript>Please enable JavaScript in your web browser to view this content.</noscript>
+    <script async src="js/tlr-calculator-script.js"></script>
+</body>
+</html>
