@@ -50,7 +50,7 @@
    ======================================== */
 @font-face { /* Use for headers */
     font-family: "HelveticaNeueLightCondensed";
-    src: url('/fonts/helvetica-neue/light-condensed/helvetica-neue-light-condensed.ttf') format('truetype');
+    src: url('../fonts/helvetica-neue/light-condensed/helvetica-neue-light-condensed.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
     font-stretch: condensed;
@@ -58,7 +58,7 @@
 
 @font-face { /* Use for headers backup */
     font-family: "GothamLight";
-    src: url('/fonts/gotham/light/gotham-light.otf') format('opentype');
+    src: url('../fonts/gotham/light/gotham-light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
     font-stretch: condensed;
@@ -66,7 +66,7 @@
 
 @font-face { /* Use for sub headers */
     font-family: "GothamBlack";
-    src: url('/fonts/gotham/black/gotham-black.otf') format('opentype');
+    src: url('../fonts/gotham/black/gotham-black.otf') format('opentype');
     font-weight: 900;
     font-style: normal;
     font-stretch: normal;
@@ -74,7 +74,7 @@
 
 @font-face { /* Use for paragraphs */
     font-family: "GothamBook";
-    src: url('/fonts/gotham/book/gotham-book.otf') format('opentype');
+    src: url('../fonts/gotham/book/gotham-book.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
@@ -82,7 +82,7 @@
 
 @font-face { /* Use for bolding in paragraphs and links with backgrounds */
     font-family: "GothamBold";
-    src: url('/fonts/gotham/bold/gotham-bold.otf') format('opentype');
+    src: url('../fonts/gotham/bold/gotham-bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -178,7 +178,7 @@ footer p {
     width: 100%;
     min-width: 800px;
     max-width: 800px;
-    background-image: url(/jpg/nautilus-shell-pattern-vertical-white-blue-1.jpg);
+    background-image: url(../images/nautilus-shell-pattern-vertical-white-blue-1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
